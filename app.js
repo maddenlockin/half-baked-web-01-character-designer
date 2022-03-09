@@ -3,8 +3,8 @@ const headDropdown = document.getElementById('head-dropdown');
 const middleDropdown = document.getElementById('middle-dropdown');
 const bottomDropdown = document.getElementById('bottom-dropdown');
 const headEl = document.getElementById('head');
-const middleEl = document.getElementById('middle');
-const bottomEl = document.getElementById('bottom');
+// const middleEl = document.getElementById('middle');
+// const bottomEl = document.getElementById('bottom');
 const reportEl = document.getElementById('report');
 const catchphrasesEl = document.getElementById('catchphrases');
 const catchphraseInput = document.getElementById('catchphrase-input');
@@ -24,7 +24,7 @@ headDropdown.addEventListener('change', () => {
     // increment the head change count state
     headChange++;
     // update the dom for the head (use style.backgroundImage on the bottomEl div instead of trying to set the .src -- it's NOT an img tag!)
-    headEl.style.backgroundImage = `${headSelect}-head`;
+    headEl.style.backgroundImage = `url(assets/${headSelect}-head.png)`;
     // update the stats to show the new count (call displayStats() to do this work)
     displayStats();
 });
