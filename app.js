@@ -20,13 +20,13 @@ let catchphraseArr = [];
 
 headDropdown.addEventListener('change', () => {
     // get the value of the head dropdown
-    
+    const headSelect = headDropdown.value;
     // increment the head change count state
-    
+    headChange++;
     // update the dom for the head (use style.backgroundImage on the bottomEl div instead of trying to set the .src -- it's NOT an img tag!)
-    
+    headEl.style.backgroundImage = `${headSelect}-head`;
     // update the stats to show the new count (call displayStats() to do this work)
-    
+    displayStats();
 });
 
 
